@@ -26,5 +26,3 @@ dist-ssr
 .env
 .env.*
 !.env.example
-# .gitignore
-backend/.env
