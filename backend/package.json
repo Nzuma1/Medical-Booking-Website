@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "auto:commit": "git add . && git commit -m \"Auto-commit changes\" && git push",
+    "watch:git": "chokidar . --ignore node_modules --ignore .git -c \"npm run auto:commit\""
   },
   "author": "Isadia Nzuma",
   "license": "ISC",
@@ -20,7 +22,10 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.8.0",
     "mongoose": "^8.8.0",
-    "nodemon": "^3.1.9",
+    "nodemon": "^3.1.10",
     "stripe": "^16.2.0"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0"
   }
 }
